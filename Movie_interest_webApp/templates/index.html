@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Interest Predictor</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f6d365, #fda085);
+            font-family: Arial, sans-serif;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        input[type="number"], select {
+            padding: 10px;
+            width: 200px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 10px 25px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #eb5e28;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Interest Predictor</h1>
+        <form action="/predict" method="POST">
+            <label for="feature1">Age:</label><br>
+            <input type="number" name="feature1" required><br><br>
+
+            <label for="feature2">Gender:</label><br>
+            <select name="feature2" required>
+                <option value="">--Select Gender--</option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select><br><br>
+
+            <button type="submit">Predict Interest</button>
+        </form>
+    </div>
+</body>
+</html>

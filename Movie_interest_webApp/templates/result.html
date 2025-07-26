@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .result-container {
+            background-color: #ffffffcc;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2d3436;
+            margin-bottom: 20px;
+        }
+
+        .prediction {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0984e3;
+            margin-bottom: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #6c5ce7;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #4834d4;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>🎉 Your Predicted Movie Interest</h1>
+        <div class="prediction">{{ prediction[0] }}</div>
+        <a href="/">🔁 Predict Again</a>
+    </div>
+</body>
+</html>
